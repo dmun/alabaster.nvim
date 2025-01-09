@@ -87,6 +87,7 @@ if vim.o.background == "dark" then
         TermCursorNC = { fg = bg, bg = fg },
         ErrorMsg = { fg = error, bg = mistake.bg },
         VertSplit = { fg = "#2b3d40" },
+        WinSeparator = { fg = "#2b3d40" },
         Folded = { bg = "#182325", fg = "#7d7d7d" },
         FoldColumn = { bg = bg, fg = "#4d4d4d" },
         SignColumn = {},
@@ -121,7 +122,8 @@ if vim.o.background == "dark" then
         TabLine = { bg = statusline, fg = "#7d7d7d" },
         TabLineFill = { bg = statusline },
         TabLineSel = { bg = statusline, fg = ansi.blue },
-        Title = { fg = const_fg },
+        Title = { fg = const_fg, bold = true },
+        FloatTitle = { bold = true },
         Visual = { bg = "#293334" },
         VisualNOS = { bg = "#293334" },
         WarningMsg = { fg = "#e1ad4c" },
@@ -293,7 +295,8 @@ if vim.o.background == "dark" then
         TelescopeTitle = { fg = ansi.brightyellow },
         TelescopeResultsTitle = { fg = ansi.yellow },
         --- fzf-lua
-        FzfLuaBorder = { fg = "#2b3d40" },
+        FzfLuaBorder = { link = "FloatBorder" },
+        FzfLuaTitle = { link = "FloatTitle" },
         --- Neogit
         NeogitPopupActionDisabled = { fg = darker_fg },
         NeogitPopupActionKey = { fg = ansi.magenta },
@@ -365,17 +368,17 @@ if vim.o.background == "dark" then
         --- nvim-dap-virtual-text
         NvimDapVirtualText = { bg = "#1d292b", fg = ansi.cyan },
         --- Noice
-        NoiceCmdlineIcon = { link = "AlabasterDarkGreen" },
+        NoiceCmdlineIcon = { fg = bg, bg = ansi.yellow, bold = true },
         NoiceCmdlinePopupBorder = { link = "AlabasterDarkGreen" },
         NoiceConfirmBorder = { link = "AlabasterDarkGreen" },
         NoiceCmdlinePopupBorderCmdline = { link = "AlabasterDarkGreen" },
-        NoiceCmdlineIconCmdline = { link = "AlabasterDarkGreen" },
+        NoiceCmdlineIconCmdline = { fg = bg, bg = ansi.green, bold = true },
         NoiceCmdlinePopupBorderFilter = { link = "AlabasterDarkGreen" },
-        NoiceCmdlineIconFilter = { link = "AlabasterDarkGreen" },
+        NoiceCmdlineIconFilter = { fg = bg, bg = ansi.green, bold = true },
         NoiceCmdlinePopupBorderLua = { link = "AlabasterDarkGreen" },
-        NoiceCmdlineIconLua = { link = "AlabasterDarkGreen" },
+        NoiceCmdlineIconLua = { fg = bg, bg = ansi.blue, bold = true },
         NoiceCmdlinePopupBorderSearch = { link = "AlabasterYellow" },
-        NoiceCmdlineIconSearch = { link = "AlabasterYellow" },
+        NoiceCmdlineIconSearch = { fg = bg, bg = ansi.yellow, bold = true },
         -- Languages
         --- asm
         asmDirective = { fg = dim_comment },
@@ -462,6 +465,7 @@ else
         TermCursorNC = { fg = bg, bg = fg },
         ErrorMsg = { fg = error, bg = mistake.bg },
         VertSplit = { fg = "#abbdc0" },
+        WinSeparator = { fg = "#abbdc0" },
         Folded = { bg = "#dddddd", fg = "#7d7d7d" },
         FoldColumn = { bg = bg, fg = "#4d4d4d" },
         SignColumn = {},
@@ -496,7 +500,7 @@ else
         TabLine = { bg = statusline, fg = "#7d7d7d" },
         TabLineFill = { bg = statusline },
         TabLineSel = { bg = statusline, fg = ansi.blue },
-        Title = { fg = const_fg },
+        Title = { fg = const_fg, bold = true },
         Visual = { bg = "#bfdbfe" },
         VisualNOS = { bg = "#bfdbfe" },
         WarningMsg = { fg = "#e1ad4c" },
@@ -669,7 +673,8 @@ else
         TelescopeTitle = { fg = ansi.yellow },
         TelescopeResultsTitle = { fg = ansi.yellow },
         --- fzf-lua
-        FzfLuaBorder = { fg = "#abbdc0" },
+        FzfLuaBorder = { link = "FloatBorder" },
+        FzfLuaTitle = { link = "FloatTitle" },
         --- Neogit
         NeogitPopupActionDisabled = { fg = darker_fg },
         NeogitPopupActionKey = { fg = ansi.magenta },
@@ -741,6 +746,7 @@ else
         --- nvim-dap-virtual-text
         NvimDapVirtualText = { bg = "#78D2C9", fg = fg },
         --- Noice
+        NoiceCmdline = { link = "StatusLine" },
         NoiceCmdlineIcon = { link = "AlabasterBrightGreen" },
         NoiceCmdlinePopupBorder = { link = "AlabasterBrightGreen" },
         NoiceConfirmBorder = { link = "AlabasterBrightGreen" },
