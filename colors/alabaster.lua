@@ -202,6 +202,8 @@ if vim.o.background == "dark" then
         DiagnosticVirtualTextInfo = { bg = "#162C0B", fg = "#7BAC62" },
 
         --- Treesitter
+        TreesitterContext = { bg = statusline },
+        TreesitterContextLineNumber = { bg = statusline },
         TSAttribute = {},
         TSConstructor = { fg = ansi.white },
         TSConditional = { fg = ansi.white },
