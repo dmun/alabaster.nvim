@@ -354,6 +354,11 @@ if vim.o.background == "dark" then
         healthSuccess = { fg = ansi.green, bg = bg },
         --- cmp
         CmpItemMenuDefault = { fg = ansi.magenta },
+        BlinkCmpSignatureHelp = { bg = pmenu_bg },
+        BlinkCmpSignatureHelpBorder = { bg = pmenu_bg },
+        BlinkCmpDoc = { bg = pmenu_bg },
+        BlinkCmpDocSeparator = { fg = punct_fg, bg = pmenu_bg },
+        BlinkCmpDocBorder = { bg = pmenu_bg },
         --- nvim-ts-rainbow
         rainbowcol1 = { fg = ansi.yellow },
         rainbowcol2 = { fg = ansi.magenta },
